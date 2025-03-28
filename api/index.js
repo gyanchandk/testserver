@@ -1,16 +1,10 @@
-// Import the express module
-const express = require('express');
-
-// Create an Express application
+const express = require("express");
 const app = express();
+const { createServer } = require("@vercel/node");
 
-// Define a simple route
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
+app.get("/", (req, res) => {
+  res.send("Hello from Express on Vercel!");
 });
 
-// Start the server and listen on port 3000
-app.listen(3000, () => {
-  console.log('Server is running on http://localhost:3000');
-});
+module.exports = createServer(app);
 
