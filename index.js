@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+app.use(express.static("public"));
 
 const app = express();
 
@@ -12,6 +13,9 @@ app.get("/", (req, res) => {
 app.get("/api", (req, res) => {
   res.send("api home page");
 });
+
+
+
 
 app.get("/download", (req, res) => {
   const filePath = path.join(__dirname, "files/birthday.pdf"); // Update with your file path

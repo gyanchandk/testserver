@@ -1,0 +1,1 @@
+ this is sample page to test the public folder in server
